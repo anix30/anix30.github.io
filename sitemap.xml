@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://anix30.github.io/Git-Basic-Knowledge/</loc>
+    
+    <lastmod>2020-12-29T12:00:04.323Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://anix30.github.io/Use-hexo-to-deploy-to-GitHub-Pages/</loc>
     
     <lastmod>2019-05-16T11:38:22.000Z</lastmod>

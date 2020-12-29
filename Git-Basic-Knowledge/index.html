@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Use Hexo to Deploy to GitHub Pages |  Landscape -- PeterZ
+    Git Basic Knowledge |  Landscape -- PeterZ
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -35,32 +35,28 @@
       
     <main class="content on">
       <section class="outer">
-  <article id="post-Use-hexo-to-deploy-to-GitHub-Pages" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+  <article id="post-Git-Basic-Knowledge" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
   <div class="article-inner">
     
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Use Hexo to Deploy to GitHub Pages
+  Git Basic Knowledge
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/Use-hexo-to-deploy-to-GitHub-Pages/" class="article-date">
-  <time datetime="2019-05-16T02:21:33.000Z" itemprop="datePublished">2019-05-16</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Technique/">Technique</a>
-  </div>
-  
+      <a href="/Git-Basic-Knowledge/" class="article-date">
+  <time datetime="2020-12-29T11:45:19.000Z" itemprop="datePublished">2020-12-29</time>
+</a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">702</span>
+            <span class="post-count">1k</span>
         </span>
     </span>
 
@@ -69,7 +65,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">4 min</span>
+            <span class="post-count">6 min</span>
         </span>
     </span>
 </div>
@@ -84,37 +80,106 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p><a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo Documents</a><br><a href="https://hexo.io/docs/troubleshooting.html?" target="_blank" rel="noopener">Hexo troubleshooting</a></p>
-<h2 id="The-Enviroment"><a href="#The-Enviroment" class="headerlink" title="The Enviroment"></a>The Enviroment</h2><ul>
-<li>Windows 10 or Mac 10.14 Mojave</li>
-<li>Node.js 10.15</li>
-<li>npm 6.4</li>
-<li>git 2.16</li>
+  <h2 id="Installing-Git"><a href="#Installing-Git" class="headerlink" title="Installing Git"></a>Installing Git</h2><h3 id="Installing-on-Linux"><a href="#Installing-on-Linux" class="headerlink" title="Installing on Linux"></a>Installing on Linux</h3><ul>
+<li><p>If you’re on Fedora (or any closely-related RPM-based distribution, such as RHEL or CentOS), you can use dnf:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo dnf install git-all</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>If you’re on a Debian-based distribution, such as Ubuntu, try apt:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install git-all</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h2 id="1-–-Create-a-Project-for-GitHub-Pages"><a href="#1-–-Create-a-Project-for-GitHub-Pages" class="headerlink" title="1 – Create a Project for GitHub Pages"></a>1 – Create a Project for GitHub Pages</h2><p><a href="https://pages.github.com/" target="_blank" rel="noopener">The official tutorial for create a GitHub Pages</a></p>
-<p>First you have to create a repository whose name must be ‘username.github.io’. If you already have a github account, you can create repository directly, else you need to register a new github accout first.<br>Head over to <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> and <a href="https://github.com/new" target="_blank" rel="noopener">create a new repository</a> named ‘username.github.io’, where username is your username (or organization name) on GitHub.<br>Then the ‘username.github.io’ is your website address, and this is also your hexo projectname.</p>
-<p><em>If the first part of the repository doesn’t exactly match your username, it won’t work, so make sure to get it right.</em><br><img src="/images/how-to-use-hexo/2019-05-16/newrepository.png" alt="alt text"></p>
-<h2 id="2-–-Install-Hexo"><a href="#2-–-Install-Hexo" class="headerlink" title="2 – Install Hexo"></a>2 – Install Hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h2 id="3-–-Initialize-the-Hexo-project"><a href="#3-–-Initialize-the-Hexo-project" class="headerlink" title="3 – Initialize the Hexo project"></a>3 – Initialize the Hexo project</h2><p>Go to the folder where you want to store hexo.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [projectname]</span><br></pre></td></tr></table></figure></p>
-<h2 id="4-–-Clone-the-repository"><a href="#4-–-Clone-the-repository" class="headerlink" title="4 – Clone the repository"></a>4 – Clone the repository</h2><p>Go to the folder where you want to store your project, and clone the new repository:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/username/username.github.io</span><br></pre></td></tr></table></figure>
-<p>Copy all the files from your hexo folder into github pages project folder.</p>
-<h2 id="5-–-Run-a-test-server-for-your-page-on-Mac"><a href="#5-–-Run-a-test-server-for-your-page-on-Mac" class="headerlink" title="5 – Run a test server for your page on Mac"></a>5 – Run a test server for your page on Mac</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> [project isolate or reletive path]</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<h2 id="6-–-Set-information-for-your-new-blog"><a href="#6-–-Set-information-for-your-new-blog" class="headerlink" title="6 – Set information for your new blog"></a>6 – Set information for your new blog</h2><p><a href="https://hexo.io/docs/configuration.html" target="_blank" rel="noopener">Look for the document about how to set information of your blog</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$ vi _config.yml</span><br><span class="line"></span><br><span class="line">~~~~~~~~~~~~~~~~~~ _config.yml ~~~~~~~~~~~~~~~~~~</span><br><span class="line"><span class="comment"># Site</span></span><br><span class="line">title: [The title of your website]</span><br><span class="line">subtitle:[The subtitle of your website]</span><br><span class="line">description: [The description of your website]</span><br><span class="line">author: [Your name]</span><br><span class="line">language: zh, en</span><br><span class="line">timezone: Asia/Shanghai</span><br><span class="line"></span><br><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line">url: http://yourusername.github.io/</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure></p>
-<h2 id="7-–-Set-information-to-use-Git"><a href="#7-–-Set-information-to-use-Git" class="headerlink" title="7 – Set information to use Git"></a>7 – Set information to use Git</h2><p> Install the plugin for deploy the blog by git<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> [project isolate or reletive path]</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
-<p>Set _config.yml<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ vi _config.yml</span><br><span class="line">~~~~~~~~~~~~~~~~~~ _config.yml ~~~~~~~~~~~~~~~~~~</span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:yourusername/yourusername.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
-<p>Relace the <em>repo</em> and <em>brench</em> with your own.</p>
-<p>Note: sometimes there will be an error while you want to deploy to GitHub Pages.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line"></span><br><span class="line">FATAL Something\<span class="string">'s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span></span><br><span class="line"><span class="string">Error: Spawn failed</span></span><br><span class="line"><span class="string">at ChildProcess. (D:\Hexo\Hexo\node_modules\hexo-util\lib\spawn.js:52:19)</span></span><br><span class="line"><span class="string">at ChildProcess.emit (events.js:189:13)</span></span><br><span class="line"><span class="string">at ChildProcess.cp.emit (D:\Hexo\Hexo\node_modules\cross-spawn\lib\enoent.js:40:29)</span></span><br><span class="line"><span class="string">at Process.ChildProcess._handle.onexit (internal/child_process.js:248:12)</span></span><br></pre></td></tr></table></figure></p>
-<p>To fix this error, can go to the troubleshooting. (<a href="https://github.com/hexojs/hexo/issues/3449" target="_blank" rel="noopener">https://github.com/hexojs/hexo/issues/3449</a>)</p>
-<h2 id="8-–-Create-a-new-post-file"><a href="#8-–-Create-a-new-post-file" class="headerlink" title="8 – Create a new post file"></a>8 – Create a new post file</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-<p>Next is the structure of the project folder.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── .deploy</span><br><span class="line">├── public</span><br><span class="line">├── scaffolds</span><br><span class="line">|   ├── draft.md</span><br><span class="line">|   ├── page.md</span><br><span class="line">|   └── post.md</span><br><span class="line">├── scripts</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">├── themes</span><br><span class="line">├── _config.yml</span><br><span class="line">└── package.json</span><br></pre></td></tr></table></figure></p>
-<h2 id="9-–-Generate"><a href="#9-–-Generate" class="headerlink" title="9 – Generate"></a>9 – Generate</h2><p>Generating static files with Hexo.<br>This will create the .html .css .js files in public folder.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p>
-<p>Hexo can watch for file changes and regenerate files immediately. Hexo will compare the SHA1 checksum of your files and only write if file changes are detected.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate --watch</span><br></pre></td></tr></table></figure></p>
-<h2 id="10-–-Deploy-new-blog"><a href="#10-–-Deploy-new-blog" class="headerlink" title="10 – Deploy new blog"></a>10 – Deploy new blog</h2><p>(<a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">https://hexo.io/docs/deployment.html</a>)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<p>Before your first deployment, make sure that you have modified the deployment settings in _config.yml.<br>See ‘7 – Set information to use Git’</p>
-<p>(Optional)Before deployment, you can clean the cache first.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<h2 id="11-–-Change-the-theme"><a href="#11-–-Change-the-theme" class="headerlink" title="11 – Change the theme"></a>11 – Change the theme</h2><p>Search the theme you want in (<a href="https://hexo.io/themes/)" target="_blank" rel="noopener">https://hexo.io/themes/)</a>.<br>In terminal(Unix) or powershell(windows 10), change current work directory to the root of your project folder.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> [The github repository address of the theme you want]</span><br><span class="line"></span><br><span class="line"><span class="comment"># for example</span></span><br><span class="line"><span class="comment">## download the theme code</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/cgmartin/hexo-theme-bootstrap-blog.git themes/bootstrap-blog</span><br><span class="line"><span class="comment">## Set information to use the theme</span></span><br><span class="line">$ vi _config.yml</span><br><span class="line">~~~~~~~~~~~~~~~~~~ _config.yml ~~~~~~~~~~~~~~~~~~</span><br><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="comment">### replace the name of theme with what you want</span></span><br><span class="line">theme: bootstrap-blog</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight python"><figcaption><span>print</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'Hello World!'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Installing-on-macOS"><a href="#Installing-on-macOS" class="headerlink" title="Installing on macOS"></a>Installing on macOS</h3><ul>
+<li>Homebrew<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install git</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>or Xcode<br>Apple ships a binary package of Git with Xcode.</p>
+<h3 id="Installing-on-Windows"><a href="#Installing-on-Windows" class="headerlink" title="Installing on Windows"></a>Installing on Windows</h3><p>There are also a few ways to install Git on Windows. The most official build is available for download on the Git website. Just go to <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a> and the download will start automatically. </p>
+<h1 id="1-Getting-a-Git-Repository"><a href="#1-Getting-a-Git-Repository" class="headerlink" title="1. Getting a Git Repository"></a>1. Getting a Git Repository</h1><h2 id="1-1-Initializing-a-Repository-in-an-Existing-Directory"><a href="#1-1-Initializing-a-Repository-in-an-Existing-Directory" class="headerlink" title="1.1 Initializing a Repository in an Existing Directory"></a>1.1 Initializing a Repository in an Existing Directory</h2><p>If you have a project directory that is currently not under version control and you want to start<br>controlling it with Git, you first need to go to that project’s directory.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /Users/user/my_projec</span><br><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<h2 id="1-2-Cloning-an-Existing-Repository"><a href="#1-2-Cloning-an-Existing-Repository" class="headerlink" title="1.2 Cloning an Existing Repository"></a>1.2 Cloning an Existing Repository</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> &lt;url&gt;</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/libgit2/libgit2</span><br></pre></td></tr></table></figure>
+<h1 id="2-Recording-Changes-to-the-Repository"><a href="#2-Recording-Changes-to-the-Repository" class="headerlink" title="2. Recording Changes to the Repository"></a>2. Recording Changes to the Repository</h1><p>Each file in the working directory can be in one of two states: tracked or untracked. </p>
+<ul>
+<li>Tracked files are files that were in the last snapshot; they can be unmodified, modified, or staged. In short, tracked files are files that Git knows about.</li>
+<li>Untracked files are everything else — any files in your working directory that were not in your last snapshot and are not in your staging area.</li>
+</ul>
+<p><img src="../images/how-to-use-hexo/2020-12-29/lifecycle_status.png" alt="Screen Shot 2020-12-28 at 8.35.44 PM.png"></p>
+<h2 id="2-1-Checking-the-Status-of-Your-Files"><a href="#2-1-Checking-the-Status-of-Your-Files" class="headerlink" title="2.1 Checking the Status of Your Files"></a>2.1 Checking the Status of Your Files</h2><p>The main tool you use to determine which files are in which state is the git status command.</p>
+<blockquote>
+<p>$ git status<br>On branch master<br>Your branch is up-to-date with ‘origin/master’.nothing to commit, working directory clean</p>
+</blockquote>
+<p>This means none of your tracked files are modified.</p>
+<h3 id="2-1-1-Tracking-New-Files"><a href="#2-1-1-Tracking-New-Files" class="headerlink" title="2.1.1 Tracking New Files"></a>2.1.1 Tracking New Files</h3><p>Make a new file README, then add it to the TRACKING status.</p>
+<blockquote>
+<p>$ git add README</p>
+</blockquote>
+<blockquote>
+<p>$ git status<br>On branch master<br>Your branch is up-to-date with ‘origin/master’.<br>Changes to be committed:<br>  (use “git restore –staged <file>…” to unstage)</file></p>
+</blockquote>
+<p>new file: README</p>
+<h3 id="2-1-2-Staging-Modified-Files"><a href="#2-1-2-Staging-Modified-Files" class="headerlink" title="2.1.2 Staging Modified Files"></a>2.1.2 Staging Modified Files</h3><p>Change a file that was already tracked, run the ‘git status’ command.</p>
+<blockquote>
+<p>$ git status<br>On branch master<br>Your branch is up-to-date with ‘origin/master’.<br>Changes to be committed:<br>(use “git reset HEAD <file>…” to unstage)</file></p>
+</blockquote>
+<blockquote>
+<p>new file: README</p>
+</blockquote>
+<blockquote>
+<p>Changes not staged for commit:<br>(use “git add <file>…” to update what will be committed)<br>(use “git checkout – <file>…” to discard changes in working directory)</file></file></p>
+</blockquote>
+<blockquote>
+<p>modified: CONTRIBUTING.md</p>
+</blockquote>
+<h3 id="2-1-3-Short-Status"><a href="#2-1-3-Short-Status" class="headerlink" title="2.1.3 Short Status"></a>2.1.3 Short Status</h3><p>If you run ‘<em>git status -s</em>‘ or ‘<em>git status –short</em>‘ you get a far more simplified output from the command:</p>
+<blockquote>
+<p>$ git status -s<br>M README<br>MM Rakefile<br>A lib/git.rb<br>M lib/simplegit.rb<br>?? LICENSE.txt</p>
+</blockquote>
+<p>New files that aren’t tracked have a <strong>??</strong> next to them, new files that have been added to the staging area have an <strong>A</strong>, modified files have an <strong>M</strong> and so on.</p>
+<h2 id="2-2-Viewing-Your-Staged-and-Unstaged-Changes"><a href="#2-2-Viewing-Your-Staged-and-Unstaged-Changes" class="headerlink" title="2.2 Viewing Your Staged and Unstaged Changes"></a>2.2 Viewing Your Staged and Unstaged Changes</h2><p>If you want to know exactly what you changed, not just which files were changed — you can use the ‘<em>git diff</em>‘ command.</p>
+<ul>
+<li><code>git diff</code> — only changes that are still unstaged.</li>
+<li><code>git diff --staged(or --cached)</code> — compares your staged changes to your last commit:</li>
+</ul>
+<h2 id="2-3-Committing-Your-Changes"><a href="#2-3-Committing-Your-Changes" class="headerlink" title="2.3 Committing Your Changes"></a>2.3 Committing Your Changes</h2><ul>
+<li>The simplest way to commit is to type ‘<em>git commit</em>‘. Doing so launches your editor of choice (For example: Vim).<br><code>$ git commit</code></li>
+<li>you can pass the _-v_ option to ‘<em>git commit</em>‘.<br><code>$ git commit -v</code></li>
+<li>you can type your commit message inline with the ‘commit’ command by specifying it after a ‘-m’ flag,<br><code>$ git commit -m &quot;Story 182: fix benchmarks for speed&quot;</code></li>
+<li>Adding the ‘-a’ option to the ‘git commit’ command makes Git automatically stage every file that is already tracked before doing the commit,  letting you skip the ‘git add’ part<br><code>$ git commit -a -m &#39;Add new benchmarks&#39;</code></li>
+</ul>
+<h2 id="2-4-Removing-Files"><a href="#2-4-Removing-Files" class="headerlink" title="2.4 Removing Files"></a>2.4 Removing Files</h2><ul>
+<li><code>$ git rm \&lt;filename&gt;</code> — removes the file from your working directory and remove it from your tracked files</li>
+<li><code>$ rm \&lt;filename&gt;</code>— just removes the file from your working directory</li>
+</ul>
+<h2 id="2-5-Moving-Files"><a href="#2-5-Moving-Files" class="headerlink" title="2.5 Moving Files"></a>2.5 Moving Files</h2><p><code>$ git mv file_from file_to</code>  is equivalent to running something like</p>
+<blockquote>
+<p>\$ mv file_from file_to<br>\$ git rm file_from<br>\$ git add file_to</p>
+</blockquote>
+<h1 id="3-Viewing-the-Commit-History"><a href="#3-Viewing-the-Commit-History" class="headerlink" title="3. Viewing the Commit History"></a>3. Viewing the Commit History</h1><ul>
+<li><code>$ git log</code> — lists the commits made in that repository in reverse<br>chronological order</li>
+<li><code>$ git log -p(or --patch)</code> — shows the difference (the patch output)<br>introduced in each commit.</li>
+<li><code>$ git log --stat</code> — show the abbreviated stats for each commit</li>
+<li><code>$ git log --pretty=oneline</code> — The oneline value for this<br>option prints each commit on a single line</li>
+<li><code>$ git log --pretty=format:&quot;%h - %an, %ar : %s&quot;</code> — allows you to specify your own log output format</li>
+<li><code>$ git log --graph</code> — adds a nice little ASCII graph showing your branch and merge history</li>
+<li><code>$ git log -&lt;n&gt;</code> — Show only the last n commits</li>
+<li><code>$ git log --since, --after</code> — Limit the commits to those made after the specified date.</li>
+<li><code>$ git log --since, --after</code> — Limit the commits to those made before the specified date.</li>
+<li><code>$ git log --graph</code> — Only show commits in which the author entry matches the specified string.</li>
+<li><code>$ git log --committer</code> — Only show commits in which the committer entry matches the specified string.</li>
+<li><code>$ git log --grep</code> — Only show commits with a commit message containing the string</li>
+</ul>
+<h1 id="4-Undoing-things-with-git-restore"><a href="#4-Undoing-things-with-git-restore" class="headerlink" title="4. Undoing things with git restore"></a>4. Undoing things with git restore</h1><ul>
+<li><code>$ git restore --staged &lt;file&gt;</code> — transfer stageing file to unstage</li>
+<li><code>$ git restore &lt;file&gt;...</code>— Unmodify a Modified File </li>
+</ul>
+<h1 id="5-Working-with-Remotes"><a href="#5-Working-with-Remotes" class="headerlink" title="5. Working with Remotes"></a>5. Working with Remotes</h1><h2 id="5-1-Showing-the-Remotes"><a href="#5-1-Showing-the-Remotes" class="headerlink" title="5.1 Showing the Remotes"></a>5.1 Showing the Remotes</h2><ul>
+<li><code>$ git remote</code> — show the remote name</li>
+<li><code>$ git remote -v</code>  — shows the remote URLs <h2 id="5-2-Adding-Remote-Repositories"><a href="#5-2-Adding-Remote-Repositories" class="headerlink" title="5.2 Adding Remote Repositories"></a>5.2 Adding Remote Repositories</h2></li>
+<li><code>git remote add &lt;shortname&gt; &lt;url&gt;</code> — add a new remote Git repository as a shortname you can reference easily<h2 id="5-3-Fetching-and-Pulling-from-Your-Remotes"><a href="#5-3-Fetching-and-Pulling-from-Your-Remotes" class="headerlink" title="5.3 Fetching and Pulling from Your Remotes"></a>5.3 Fetching and Pulling from Your Remotes</h2></li>
+<li><code>$ git fetch &lt;remote&gt;</code> — get data from your remote projects, it doesn’t automatically merge it</li>
+<li><code>$ git pull &lt;remote&gt;</code> —  automatically fetch and then merge that remote branch into your current branch<h2 id="5-4-Pushing-to-Your-Remotes"><a href="#5-4-Pushing-to-Your-Remotes" class="headerlink" title="5.4 Pushing to Your Remotes"></a>5.4 Pushing to Your Remotes</h2></li>
+<li><code>git push &lt;remote&gt; &lt;branch&gt;</code> — push your branch to your origin server</li>
+</ul>
+<h1 id="6-Git-Aliases"><a href="#6-Git-Aliases" class="headerlink" title="6. Git Aliases"></a>6. Git Aliases</h1><p><code>$ git config --global alias.lg &#39;log --pretty=format:&quot;%h - %an, %ar : %s&quot;&#39;</code></p>
  
       <!-- reward -->
       
@@ -185,28 +250,22 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://anix30.github.io/Use-hexo-to-deploy-to-GitHub-Pages/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://anix30.github.io/Git-Basic-Knowledge/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo-deployment/">Hexo deployment</a></li></ul>
-
     </footer>
   </div>
 
    
   <nav class="article-nav">
     
-      <a href="/Git-Basic-Knowledge/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            Git Basic Knowledge
-          
-        </div>
-      </a>
     
+      <a href="/Use-hexo-to-deploy-to-GitHub-Pages/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Use Hexo to Deploy to GitHub Pages</div>
+      </a>
     
   </nav>
 
